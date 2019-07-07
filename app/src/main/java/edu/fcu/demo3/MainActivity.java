@@ -3,6 +3,7 @@ package edu.fcu.demo3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     Button btnStart;
     TextView tvResult;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         //設定物件的 內容 (on click event)
         btnStart.setOnClickListener(btnStartOnClick);
+        Log.i(TAG,"onCreate");
     }
 
     private View.OnClickListener btnStartOnClick = new View.OnClickListener() {
